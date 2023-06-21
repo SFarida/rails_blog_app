@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe 'posts/index', type: :feature do
   before(:each) do
     @user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Developer',
-                           posts_counter: 0)
+                        posts_counter: 0)
     @first_post = Post.create(author: @user, title: 'Hello', text: 'This is my first post', comments_counter: 5,
-    likes_counter: 0)
+                              likes_counter: 0)
     5.times do |i|
       Comment.create(text: "This is comment ##{i}", author_id: @user.id, post_id: @first_post.id)
     end

@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'users/index', type: :feature do
   before(:each) do
-    @user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Developer', posts_counter: 0)
+    @user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Developer',
+                        posts_counter: 0)
     @user1 = User.create(name: 'Anne', photo: 'https://i.pravatar.cc/300', bio: 'Future Chemist', posts_counter: 3)
     visit '/'
   end
