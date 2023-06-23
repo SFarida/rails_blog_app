@@ -40,6 +40,10 @@ RSpec.describe 'posts/index', type: :feature do
     expect(page).to have_content('Number of posts: 1')
   end
 
+  it 'displays a section for pagination' do
+    expect(page).to have_content('Pagination')
+  end
+
   it 'displays user photo' do
     expect(page).to have_css("img[src*='https://unsplash.com/photos/F_-0BxGuVvo']")
   end
