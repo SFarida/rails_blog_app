@@ -27,5 +27,4 @@ RSpec.describe 'users/index', type: :feature do
     visit user_path(@user.id)
     expect(page).to have_current_path(user_path(@user.id))
   end
-
 end
