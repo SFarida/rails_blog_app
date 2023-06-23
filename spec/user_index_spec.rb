@@ -22,4 +22,10 @@ RSpec.describe 'users/index', type: :feature do
     expect(page).to have_css("img[src*='https://i.pravatar.cc/300']")
     expect(page).to have_css("img[src*='https://unsplash.com/photos/F_-0BxGuVvo']")
   end
+
+  it 'Redirects to the user show page when you click on a user' do
+    visit user_path(@user.id)
+    expect(page).to have_current_path(user_path(@user.id))
+  end
+
 end
