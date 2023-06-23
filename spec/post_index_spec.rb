@@ -20,6 +20,10 @@ RSpec.describe 'posts/index', type: :feature do
     expect(page).to have_content('Hello')
   end
 
+  it 'displays first comment' do
+    expect(page).to have_content('This is comment #1')
+  end
+
   it 'displays number of comments' do
     expect(page).to have_content('Comments: 10')
   end
